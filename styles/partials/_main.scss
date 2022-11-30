@@ -1,0 +1,556 @@
+body{
+    background-color: map-get($colores, backgroundTextCardsHover );
+}
+.d-block{
+    height: 40vw;
+    width: 100vw;
+}
+h3{
+    font-size: 2.2vw;
+    margin-top: 4vw;
+    text-align: center;
+  }
+.carrousel-box{
+    position: relative;
+    display: inline-block;
+    .d-block{
+        height: 40vw;
+        width: 100vw;
+    }
+    .carrousel-title{
+        color: black;
+        font-size: 3vw;
+        font-weight:bold ;
+        position: absolute;
+        top: 7vw;
+        left: 60vw;
+    }
+    .carrousel-text{
+        background-color: map-get($colores, backgroundTextCardsHover );
+        color:rgb(224, 202, 202);
+        font-size: 2.2vw;
+        padding-left: 1vw;
+        padding-right: 2vw;
+        padding-top: 20vw;
+        padding-bottom: 25vw;
+        position: absolute;
+        top: -9.5vw;
+        left: 58vw;
+    }
+    .btn{
+        color: black;
+        height:5vw ;
+        width: 6vw ;
+        font-size: 1.5vw;
+        position: absolute;
+        top: 23vw;
+        left: 61vw;
+    }
+}
+ 
+.container-grid{
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr;
+    grid-template-rows: 1.5fr 1.5fr;
+    grid-auto-columns: 1fr;
+    gap: 2vw 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "jujuy misiones santa-cruz"
+      "salta tucuman buenos-aires";
+      justify-items: center;
+    margin-top: 5vw;
+    
+    .jujuy{
+        @extend %cardDefault;
+        background-color: map-get($colores , backgroundTextCards);
+
+        &:hover{
+            @extend %cardHover;
+            height: map-get($tamanos, cardSizeHover );
+            background-color: map-get($colores, backgroundTextCardsHover );
+        }
+    }
+   
+    .misiones{
+        @extend %cardDefault;
+        background-color: map-get($colores , backgroundTextCards);
+
+        &:hover{
+            @extend %cardHover;
+            height: map-get($tamanos, cardSizeHover );
+            background-color: map-get($colores, backgroundTextCardsHover );
+        }
+    }
+    
+    .santa-cruz{
+        @extend %cardDefault;
+        background-color: map-get($colores , backgroundTextCards);
+       
+        &:hover{
+            @extend %cardHover;
+            height: map-get($tamanos, cardSizeHover );
+            background-color: map-get($colores, backgroundTextCardsHover );
+        }
+    }
+   
+    .salta{
+        @extend %cardDefault;
+        background-color: map-get($colores , backgroundTextCards);
+
+        &:hover{
+           @include cardHoverr( $background: rgb(110, 65, 65) );
+            
+        }
+    }
+    
+    .tucuman{
+        @extend %cardDefault;
+        background-color: map-get($colores , backgroundTextCards);
+
+        &:hover{
+            @include cardHoverr( $background: rgb(110, 65, 65) );
+            
+        }
+    }
+    
+    .buenos-aires{
+        @extend %cardDefault;
+        background-color: map-get($colores , backgroundTextCards);
+
+        &:hover{
+            @include cardHoverr( $background: rgb(110, 65, 65) );
+            
+        }
+            
+    }
+
+}
+.eventConteiner {  
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 1% 2px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "corsoImg corsoText";
+    .corsoImg{
+        width: 30vw;
+        padding-left: 3vw;
+        img{
+            width: 30vw;
+            height: 10vw;
+        }
+    }
+    .corsoText{
+        padding-top: 5vw;
+        width: 55vw;
+        
+    }
+    
+
+
+
+
+
+
+  }
+  
+.comidasC {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "huminta choripan asado"
+      "locro milanesa polenta";
+    gap: 10px;
+    margin-top: 5%;
+    .huminta{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        grid-area: huminta;
+        padding: 30px;
+        border-style: double;
+        border-radius: 5px;
+        background-color: rgba(167, 157, 157, 0.5);
+        &:hover{
+            scale: 1.1;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 25px;
+        }
+        
+    }
+    .choripan{
+        font: DynaPuff;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        grid-area: choripan;
+        padding: 30px;
+        border-style: double;
+        border-radius: 5px;
+        background-color: rgba(167, 157, 157, 0.5);
+        &:hover{
+            scale: 1.1;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 25px;
+        }
+        
+    }
+    .asado{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        grid-area: asado;
+        padding: 30px;
+        border-style: double;
+        border-radius: 5px;
+        background-color: rgba(167, 157, 157, 0.5);
+        &:hover{
+            scale: 1.1;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 25px;
+        }
+        
+    
+    }
+
+    .locro{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        grid-area: locro;
+        padding: 30px;
+        border-style: double;
+        border-radius: 5px;
+        background-color: rgba(167, 157, 157, 0.5);
+        &:hover{
+            scale: 1.1;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 25px;
+        }
+        
+    }
+    .milanesa{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        grid-area: milanesa;
+        padding: 30px;
+        border-style: double;
+        border-radius: 5px;
+        background-color: rgba(167, 157, 157, 0.5);
+        &:hover{
+            scale: 1.1;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 25px;
+        }
+        
+    
+    }
+    .polenta{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        grid-area: polenta;
+        padding: 30px;
+        border-style: double;
+        border-radius: 5px;
+        background-color: rgba(167, 157, 157, 0.5);
+        &:hover{
+            scale: 1.1;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 25px;
+        }
+    }
+
+}
+
+
+
+  
+
+.dGo{  display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-auto-columns: 1fr;
+    gap: 2% 2px;
+     grid-auto-flow: row;
+     grid-template-areas: 
+        "video imagen"; 
+    .video{
+        margin-left: 1vw;
+        margin-top: 3vw;
+        iframe{
+            width: 45vw;
+            height: 25vw;
+        }
+    }    
+    .imagen{
+        display: flex; 
+        padding-right: 1vw;
+        img{
+            border-style: dotted ;
+            border-radius: 3px;
+            height:30vw ;
+            width: 25vw;
+            
+        }
+      }
+      .texto{
+        position: absolute;
+        margin-top: 34vw;
+        margin-left: 10vw ;
+        text-align: center;
+        
+        border-style: double;
+        
+    }
+    }
+h1{
+    margin-top: 2vw;
+    text-align: center;
+}
+
+.contacBlock { 
+    margin-top: 7vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 1% 2px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "contactForm contactImg";
+    .contactForm{
+        text-align: center;
+        text-align: center;
+        width: 50vw;
+        height: auto;
+        border-style:double ;
+    }
+    .contactImg{
+        padding-left: 3vw;
+        width:46vw; 
+        height: 22vw;
+    }
+  }
+  
+.titleG{
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    
+    article h3{
+        font-size: 9vw;
+    }
+    
+    .carrousel-box{
+
+         .d-block{
+            width: 100vw;
+            height: 80vw;
+
+         }
+         .carrousel-title{
+            font-size: 5vw;
+
+         }
+         .carrousel-text{
+            margin-top: -20vw;
+            padding-top: 50vw;
+            padding-bottom: 50vw;
+            font-size: 4vw;
+         }
+         .btn{
+            margin-top: 40vw;
+            width: 15vw ;
+            height: 15vw;
+            font-size: 5vw;
+            color:white;
+
+         }
+
+       
+
+    }
+        
+    .container-grid {  
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 15% 2px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "jujuy misiones"
+          "santa-cruz salta"
+          "tucuman buenos-aires";
+        
+        .jujuy{ 
+            scale: 1.4;
+            h5{
+                font-size: 15px
+            }
+            p{
+                
+                font-size: 10px;
+            }
+
+        }
+        .misiones{
+            scale: 1.4;
+            h5{
+                font-size: 15px
+            }
+            p{
+                
+                font-size: 10px;
+            }
+        }
+        .santa-cruz{
+            scale: 1.4;
+            h5{
+                font-size: 15px
+            }
+            p{
+                
+                font-size: 10px;
+            }
+        }
+        .salta{
+            scale: 1.4;
+            h5{
+                font-size: 15px
+            }
+            p{
+                
+                font-size: 10px;
+            }
+        }
+        .tucuman{
+            scale: 1.4;
+            h5{
+                font-size: 15px
+            }
+            p{
+                
+                font-size: 10px;
+            }
+        }
+        .buenos-aires{
+            scale: 1.4;
+            h5{
+                font-size: 15px
+            }
+            p{
+                
+                font-size: 10px;
+            }
+        }
+      }
+      
+
+      .dGo {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 1% 2px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "video"
+          "imagen";
+        .video{
+            margin-left: 1vw;
+            margin-top: 3vw;
+            padding-top: 30vw;
+            iframe{
+                width: 100vw;
+                height: 50vw;
+            }
+        }    
+        .imagen{
+            display: flex;
+            flex-direction: column;
+            img{
+                border-style: dotted ;
+                border-radius: 3px;
+                height:50vw ;
+                width: 100vw;
+            }
+          }
+          .texto{
+            position: absolute;
+            margin-top: 205%;
+            margin-left: 3vw ;
+            text-align: center;
+            border-style: double;
+            
+        }
+
+      
+        }
+        .comidasC{ 
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-auto-columns: 1fr;
+            gap: 10px 20px;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "huminta"
+              "choripan"
+              "asado"
+              "milanesa"
+              "locro"
+              "polenta";
+             width: 70%;
+             margin: 0 auto;
+             article{
+                .imagen-gast{
+                    width: 55vw; ;
+                    height: 50vw ;
+                }
+             }
+          }
+      
+          .contacBlock { 
+            margin-top: 7vw;
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr;
+            grid-auto-columns: 1fr;
+            gap: 1% 2px;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "contactForm ";
+            .contactForm{
+                text-align: center;
+                text-align: center;
+                width: 100vw;
+                height: auto;
+                border-style:double ;
+            }
+            .contactImg{
+                padding-left: 3vw;
+                width:0; 
+                height: 0;
+            }
+          }
+}

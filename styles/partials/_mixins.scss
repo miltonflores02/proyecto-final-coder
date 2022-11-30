@@ -1,0 +1,8 @@
+@mixin cardHoverr($background) {
+    background-color: $background;
+    text-align: center;
+    scale: 1.1;
+    color: white;
+    size-adjust: 2vw;
+    
+}
